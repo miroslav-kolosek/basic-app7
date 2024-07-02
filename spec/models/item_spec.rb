@@ -32,7 +32,7 @@ RSpec.describe Item, type: :model do
     describe "#message 3" do
       it "returns a valid message" do
         item = Item.create(name: 'Xiaomi')
-        expect(item.message).to eq "Item name is Xiaommi"
+        expect(item.message).to eq "Item name is Xiaomi"
       end
     end
 
@@ -40,6 +40,13 @@ RSpec.describe Item, type: :model do
       it "returns a valid message" do
         item = Item.create(name: 'Test')
         expect(item.message).to eq "Item name is Test"
+      end
+    end
+
+    describe "#message 5" do
+      it "returns a valid message" do
+        item = Item.create(name: 'Test123')
+        expect(item.message).to eq "Item name is Test123"
       end
     end
   end
