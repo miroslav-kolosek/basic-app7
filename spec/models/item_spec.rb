@@ -28,5 +28,12 @@ RSpec.describe Item, type: :model do
         expect(item.message).to eq "Item name is Main1"
       end
     end
+
+    describe "#message main 2" do
+      it "returns a valid message" do
+        item = Item.create(name: 'Main2')
+        expect(item.message).to eq "Item name is Main2"
+      end
+    end
   end
 end
