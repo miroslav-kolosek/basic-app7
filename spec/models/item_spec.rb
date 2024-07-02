@@ -28,5 +28,12 @@ RSpec.describe Item, type: :model do
         expect(item.message).to eq "Item name is Samsung"
       end
     end
+
+    describe "#message 3" do
+      it "returns a valid message" do
+        item = Item.create(name: 'Xiaomi')
+        expect(item.message).to eq "Item name is Xiaommi"
+      end
+    end
   end
 end
