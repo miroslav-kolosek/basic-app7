@@ -18,6 +18,7 @@ class Item < ApplicationRecord
   end
 
   def bad_method1(name_i)
+    # this is bad method
     where("name = '#{name_i}'")
   end
 
